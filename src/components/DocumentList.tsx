@@ -33,7 +33,7 @@ const DocumentList: React.FC<DocumentListProps> = ({
 
   const handleDownload = (doc: DocumentType) => {
     // Fixed: Use window.document instead of document
-    const url = `http://localhost:3001/api/files/${doc.filename}`;
+    const url = `https://backend-docusign-pro.onrender.com/api/files/${doc.filename}`;
     const link = window.document.createElement('a');
     link.href = url;
     link.download = doc.originalName;

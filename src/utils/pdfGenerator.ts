@@ -31,7 +31,7 @@ export const generatePDF = async (
       
       // Use authenticated request to get the PDF
       const response = await axios.get(
-        `http://localhost:3001/api/documents/${document._id}/file`, 
+        `https://backend-docusign-pro.onrender.com/api/documents/${document._id}/file`, 
         {
           responseType: 'arraybuffer',
           headers: {

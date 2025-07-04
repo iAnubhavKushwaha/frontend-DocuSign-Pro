@@ -3,7 +3,7 @@
 import axios from 'axios';
 import type { Document, Signature, User } from '../types/Document';
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = 'https://backend-docusign-pro.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
@@ -101,7 +101,7 @@ export const getFileUrl = (doc: Document): string => {
   }
   
   const id = typeof doc === 'string' ? doc : doc._id;
-  const url = `http://localhost:3001/api/documents/${id}/file`;
+  const url = `https://backend-docusign-pro.onrender.com/api/documents/${id}/file`;
   console.log(`File URL: ${url}`);
   return url;
 };

@@ -401,7 +401,7 @@ const PDFEditor: React.FC<PDFEditorProps> = ({
 
         console.log("Fetching PDF with authenticated request...");  
         // Use axios to fetch the PDF with authentication headers  
-        const response = await axios.get(`http://localhost:3001/api/documents/${docId}/file`, {  
+        const response = await axios.get(`https://backend-docusign-pro.onrender.com/api/documents/${docId}/file`, {  
           responseType: 'arraybuffer',  
           headers: {  
             'Authorization': `Bearer ${token}`  
